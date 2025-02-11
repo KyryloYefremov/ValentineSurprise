@@ -1,10 +1,8 @@
 from flask import Flask, render_template, request, session, redirect, url_for
-from flask_ngrok import run_with_ngrok
 from config import FLASK_SECRET_KEY
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = FLASK_SECRET_KEY
-run_with_ngrok(app)
 
 @app.route("/")
 def home():
