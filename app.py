@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, session, redirect, url_for
 from config import FLASK_SECRET_KEY
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = FLASK_SECRET_KEY
+app.secret_key = FLASK_SECRET_KEY
 
 @app.route("/")
 def home():
