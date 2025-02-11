@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор активности</title>
+    <style>
+        body {
+            background-color: #ffc0cb;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ff1493;
+            font-size: 28px;
+            margin-top: 50px;
+        }
+        .action-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .action-item {
+            margin: 10px;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Чем бы ты хотела заняться?</h1>
+    <div class="action-container">
+        {% for action in action_items %}
+            <div class="action-item">
+                <a href="{{ url_for('select_action', action=action) }}">
+                    <img src="{{ url_for('static', filename='action/' + action + '.png') }}" alt="{{ action }}">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

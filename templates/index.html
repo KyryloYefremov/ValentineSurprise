@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Будешь ли ты моей валентинкой?</title>
+    <style>
+        body {
+            background-color: #ffc0cb;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ff1493;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 20px;
+            color: white;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #ff1493;
+        }
+        .gif-container {
+            margin-top: 30px;
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Будешь ли ты моей валентинкой?</h1>
+    
+    <div class="buttons">
+        <a href="/yes" class="btn">Да, конечно!</a>
+        <a href="/" class="btn">Нет, не хочу :(</a>
+    </div>
+
+    <div class="gif-container">
+        <img src="{{ url_for('static', filename='please-cat.gif') }}" alt="Милый гиф">
+    </div>
+</body>
+</html>

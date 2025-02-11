@@ -1,0 +1,1 @@
+FLASK_SECRET_KEY = 'a3f9d7b1c5e8f429d6a2b8c4e7d9f1a0c3b5d7e8f2a4c6d9b1e7f3c5a8d4b2e6'

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор времени</title>
+    <style>
+        body {
+            background-color: #ffc0cb;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ff1493;
+            font-size: 28px;
+            margin-top: 50px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        select {
+            font-size: 18px;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            font-size: 20px;
+            color: white;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <h1>В котором часу ты свободна?</h1>
+
+    <form method="POST">
+        <label for="hour">Часы:</label>
+        <select name="hour" id="hour">
+            {% for i in range(0, 24) %}
+                <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="minute">Минуты:</label>
+        <select name="minute" id="minute">
+            {% for i in range(0, 60, 5) %}
+                <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+        </select>
+
+        <br>
+        <button type="submit" class="btn">Дальше</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ура!</title>
+    <style>
+        body {
+            background-color: #ffc0cb;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ff1493;
+            font-size: 32px;
+            margin-top: 50px;
+        }
+        p {
+            color: #ff1493;
+        }
+        .plan-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-top: 30px;
+        }
+        .plan-item {
+            text-align: center;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .gif-container {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ура! Тогда увидимся в {{ hour }}:{{ minute }} ❤️</h1>
+
+    <div class="gif-container">
+        <img src="{{ url_for('static', filename='happy.gif') }}" alt="Радостный GIF">
+    </div>
+    
+    <p>на нашем идеальном свидании: </p>
+    <div class="plan-container">
+        <div class="plan-item">
+            <img src="{{ url_for('static', filename='food/' + food + '.png') }}" alt="{{ food }}">
+        </div>
+        <p>+</p>
+        <div class="plan-item">
+            <img src="{{ url_for('static', filename='action/' + action + '.png') }}" alt="{{ action }}">
+        </div>
+    </div>
+
+    
+</body>
+</html>
